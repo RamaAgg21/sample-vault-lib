@@ -45,6 +45,7 @@ DB_USER=samplevaultest
 DB_PASS=samplevaultest
 DB_NAME=samplevaultest
 JWT_SECRET=tu_clave_secreta_super_segura
+NODE_ENV=testing
 ```
 ## 📂 Estructura del Proyecto
 

@@ -14,7 +14,7 @@
  */
 const jwt = require('jsonwebtoken');
 // En producción, siempre usar variables de entorno (.env):
-const SECRET_KEY = process.env.JWT_SECRET || 'tu_clave_secreta_super_segura';
+const SECRET_KEY = process.env.JWT_SECRET;
 
 const authMiddleware = {
     // 0. Agregar SECRET_KEY para que sea accesible al importar el objeto authMiddleware

@@ -77,12 +77,17 @@ app.use('/api/admin', adminRoutes);
 // Se coloca al final para que actúe como capturador de rutas de UI
 
 /**
- * Para ejecutar los tests descomentar la siguiente línea 
- * y comentar app.use('/', viewRoutes);
+ * Usar una variable de entorno NODE_ENV en el .env para usar
+ * el modo testing o production.
  */
-app.use('/', testsRoutes); // TESTS ROUTES
-
-// app.use('/', viewRoutes); // PRODUCTION ROUTES
+if (process.env.NODE_ENV === 'testing') 
+{
+    app.use('/', testsRoutes);
+} 
+else 
+{
+    app.use('/', viewRoutes);
+}
 
 // --- Manejo de errores global ---
 app.use((err, req, res, next) => {
