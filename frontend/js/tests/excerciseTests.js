@@ -88,8 +88,6 @@ testUtils.createTestButton("Test Subir Sample - Error por Datos Faltantes", asyn
 
     const data = await response.json();
     testUtils.log(data);
-    if (response.ok) 
+    if (response.status === 400)
         testUtils.setSuccess(btn);
-    else
-        testUtils.log(data);
 })
